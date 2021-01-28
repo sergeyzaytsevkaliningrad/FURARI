@@ -32,9 +32,10 @@ final class TaxFreeCalculatePresenter {
         self.taxes = EntityWrapper<Tax>.all(sortKey: "name", ascending: true)
         for tax in taxes {
             let country = tax.entity?.country
-            if !countries.contains(country!) {
-                countries.append(country!)
-            }
+          //  if !countries.contains(country!) {
+              //  countries.append(country!)
+         //       break
+         //  }
         }
         self.loadTaxes()
         self.loadCourses()
@@ -43,9 +44,9 @@ final class TaxFreeCalculatePresenter {
     private func loadTaxes()  {
         self.currentTaxes.removeAll()
         for tax in taxes {
-            if tax.entity?.country == countries[currentCountryIndex!] {
-                self.currentTaxes.append(tax.entity!)
-            }
+//            if tax.entity?.country == countries[currentCountryIndex!] {
+//                self.currentTaxes.append(tax.entity!)
+//            }
         }
         print(self.currentTaxes)
     }

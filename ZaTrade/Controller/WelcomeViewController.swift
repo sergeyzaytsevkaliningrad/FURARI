@@ -18,14 +18,14 @@ final class WelcomeViewController: BaseViewController {
         let subviews = [self.mainImageView, self.letsGoButton, self.chooseCountry, self.taxFreeInfo]
         
         // setup elements
-        self.letsGoButton.text = "Поехали!"
+        self.letsGoButton.text = "За работу!"
         self.letsGoButton.addTarget(self.presenter, action: #selector(self.presenter.openTabBarController), for: .touchUpInside)
         
         self.chooseCountry.countryFlag.text = "?"
-        self.chooseCountry.countryTitle.text = "Выберите страну"
+        self.chooseCountry.countryTitle.text = "Выберите робота"
         self.chooseCountry.addTarget(self.presenter, action: #selector(self.presenter.openCountryPickleView), for: .touchUpInside)
         
-        self.taxFreeInfo.setTitle("Что такое Tax Free?", for: .normal)
+        self.taxFreeInfo.setTitle("Что такое UR роботы?", for: .normal)
         self.taxFreeInfo.addTarget(self.presenter, action: #selector(self.presenter.openTaxFreeInformation), for: .touchUpInside)
         
         // enable constraints

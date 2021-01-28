@@ -57,6 +57,7 @@
 		12061C42257AD59900AA7CD9 /* NumberClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = NumberClassifier.mlmodel; sourceTree = "<group>"; };
 		12061C46257AD75D00AA7CD9 /* PriceRecognizer.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PriceRecognizer.mlmodel; sourceTree = "<group>"; };
 		12061C4A257AF07900AA7CD9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		1235982C25C2AA95007F756A /* FirstScene.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = FirstScene.rcproject; path = ../../../../Documents/FirstScene.rcproject; sourceTree = "<group>"; };
 		128CFC9925A532A300CAFE8C /* TakenImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenImageController.swift; sourceTree = "<group>"; };
 		128CFC9C25A532C900CAFE8C /* CameraViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewPresenter.swift; sourceTree = "<group>"; };
 		128CFC9F25A532E600CAFE8C /* TakenImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenImagePresenter.swift; sourceTree = "<group>"; };
@@ -152,13 +153,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		55065A382558731E00D2EDEC /* ML */ = {
+		55065A382558731E00D2EDEC /* AR */ = {
 			isa = PBXGroup;
 			children = (
 				12061C46257AD75D00AA7CD9 /* PriceRecognizer.mlmodel */,
 				12061C42257AD59900AA7CD9 /* NumberClassifier.mlmodel */,
+				1235982C25C2AA95007F756A /* FirstScene.rcproject */,
 			);
-			path = ML;
+			path = AR;
 			sourceTree = "<group>";
 		};
 		55065A3C2558733A00D2EDEC /* Model */ = {
@@ -226,7 +228,7 @@
 				55065A0E2558728000D2EDEC /* Additions */,
 				55065A26255872DD00D2EDEC /* Controller */,
 				55065A342558730400D2EDEC /* Fonts */,
-				55065A382558731E00D2EDEC /* ML */,
+				55065A382558731E00D2EDEC /* AR */,
 				55065A3C2558733A00D2EDEC /* Model */,
 				55065A462558736300D2EDEC /* Presenter */,
 				55065A522558737D00D2EDEC /* View */,

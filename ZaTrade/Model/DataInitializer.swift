@@ -91,7 +91,7 @@ class DataInitializer {
     }
     
     private func initializeInformation() {
-        let informations_data = self.entities_data["Information"] as! [[String: Any]]
+        let informations_data = self.entities_data["About UR"] as! [[String: Any]]
 
         for information_data in informations_data {
             let info = information_data["info"] as! String
