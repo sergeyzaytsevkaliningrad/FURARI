@@ -31,12 +31,12 @@ final class InformationViewController: CardViewController, WKUIDelegate {
     }
     
     private func layoutNavigationItem() {
-        self.chooseItem = UIBarButtonItem(title: "Выбор статьи", style: .plain, target: self.presenter, action: #selector(self.presenter.choose))
+        self.chooseItem = UIBarButtonItem(title: "Справочник по", style: .plain, target: self.presenter, action: #selector(self.presenter.choose))
         self.navigationItem.rightBarButtonItem = chooseItem
     }
     
     func ChooseItem() {
-        let alert = UIAlertController(title: "Выбор статьи", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Справочник по", message: nil, preferredStyle: .alert)
         alert.isModalInPopover = true
         
         let pickerView = UIPickerView()
