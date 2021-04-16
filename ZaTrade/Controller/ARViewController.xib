@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ARViewController" customModule="FURARI" customModuleProvider="target">
+            <connections>
+                <outlet property="blurView" destination="shO-PF-8bJ" id="oXf-VJ-Pxw"/>
+                <outlet property="sceneView" destination="2mo-49-wS7" id="Uyi-8b-4m7"/>
+                <outlet property="view" destination="w6F-2z-pkH" id="Nj8-9o-Jev"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="w6F-2z-pkH">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" wantsMultisampling="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mo-49-wS7" customClass="ARSCNView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                </sceneKitView>
+                <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="shO-PF-8bJ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5S0-ly-lc7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eu3-hj-EvF">
+                    <rect key="frame" x="0.0" y="44" width="414" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="85" id="esa-yq-3AN"/>
+                    </constraints>
+                </containerView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="xcQ-zv-iJs"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xcQ-zv-iJs" firstAttribute="trailing" secondItem="2mo-49-wS7" secondAttribute="trailing" id="0NG-5A-kiC"/>
+                <constraint firstItem="Eu3-hj-EvF" firstAttribute="leading" secondItem="xcQ-zv-iJs" secondAttribute="leading" id="1eW-Fq-uks"/>
+                <constraint firstAttribute="bottom" secondItem="shO-PF-8bJ" secondAttribute="bottom" id="9rT-VM-rhr"/>
+                <constraint firstAttribute="bottom" secondItem="2mo-49-wS7" secondAttribute="bottom" id="FvH-sc-xuA"/>
+                <constraint firstItem="shO-PF-8bJ" firstAttribute="leading" secondItem="w6F-2z-pkH" secondAttribute="leading" id="Gs3-04-CqC"/>
+                <constraint firstItem="shO-PF-8bJ" firstAttribute="top" secondItem="w6F-2z-pkH" secondAttribute="top" id="eOe-Po-JS5"/>
+                <constraint firstItem="xcQ-zv-iJs" firstAttribute="trailing" secondItem="Eu3-hj-EvF" secondAttribute="trailing" id="maE-FB-IPB"/>
+                <constraint firstItem="Eu3-hj-EvF" firstAttribute="top" secondItem="xcQ-zv-iJs" secondAttribute="top" id="oVN-HR-6pl"/>
+                <constraint firstItem="2mo-49-wS7" firstAttribute="top" secondItem="w6F-2z-pkH" secondAttribute="top" id="qz8-tg-gub"/>
+                <constraint firstItem="2mo-49-wS7" firstAttribute="leading" secondItem="xcQ-zv-iJs" secondAttribute="leading" id="tkK-bh-gEk"/>
+                <constraint firstAttribute="trailing" secondItem="shO-PF-8bJ" secondAttribute="trailing" id="zsd-Rs-PCj"/>
+            </constraints>
+            <point key="canvasLocation" x="-168" y="-490"/>
+        </view>
+    </objects>
+</document>

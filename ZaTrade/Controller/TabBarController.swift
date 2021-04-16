@@ -7,8 +7,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate, UIPicker
     override func viewDidLoad() {
         self.delegate = self
         
-        let productListViewController = ProductListViewController()
-        productListViewController.title = "Список инструкций"
+        let productListViewController = InstructionsListViewController()
         productListViewController.tabBarItem = UITabBarItem(title: productListViewController.title, image: UIImage(systemName: "list.bullet.rectangle"), selectedImage: nil)
         self.navigationItem.title = productListViewController.title
         

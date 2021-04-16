@@ -228,7 +228,7 @@ final class AddProductViewController: CardViewController {
         pickerView_tax.tag = 2
         pickerView_tax.dataSource = self
         pickerView_tax.delegate = self
-        pickerView_tax.selectRow(self.presenter.currentTaxIndex ?? -1, inComponent: 0, animated: false)
+//        pickerView_tax.selectRow(self.presenter.currentTaxIndex ?? -1, inComponent: 0, animated: false)
         
         alert.view.addSubview(pickerView_tax)
         pickerView_tax.translatesAutoresizingMaskIntoConstraints = false
