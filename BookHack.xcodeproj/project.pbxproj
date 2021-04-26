@@ -74,6 +74,10 @@
 		53E74FF52606392E00F76D03 /* UserFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E74FF42606392E00F76D03 /* UserFlowCoordinator.swift */; };
 		53E74FFA2606396500F76D03 /* UserViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E74FF92606396500F76D03 /* UserViewBuilder.swift */; };
 		96945A997E67FEEE8D54692C /* Pods_BookHack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67252E811C7850D4C9416E97 /* Pods_BookHack.framework */; };
+		A1C976F62636DCD8009880BB /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C976F52636DCD8009880BB /* PDFKitView.swift */; };
+		A1C976FD2636DD2B009880BB /* C48.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A1C976FA2636DD28009880BB /* C48.pdf */; };
+		A1C976FE2636DD2B009880BB /* C51.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A1C976FB2636DD29009880BB /* C51.pdf */; };
+		A1C976FF2636DD2B009880BB /* C10.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A1C976FC2636DD2B009880BB /* C10.pdf */; };
 		F2671C6931B8BB66AA95100A /* Pods_BookHack_BookHackUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D273B6AAB89D4AD35A45E41 /* Pods_BookHack_BookHackUITests.framework */; };
 		F3FA981FF79A43683E26A8C5 /* Pods_BookHackTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AC02CC6F20EF2E7B2C52943 /* Pods_BookHackTests.framework */; };
 /* End PBXBuildFile section */
@@ -175,6 +179,10 @@
 		55A2338A28712DEE30B76E9E /* Pods-BookHack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookHack.release.xcconfig"; path = "Target Support Files/Pods-BookHack/Pods-BookHack.release.xcconfig"; sourceTree = "<group>"; };
 		67252E811C7850D4C9416E97 /* Pods_BookHack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookHack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D273B6AAB89D4AD35A45E41 /* Pods_BookHack_BookHackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookHack_BookHackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C976F52636DCD8009880BB /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
+		A1C976FA2636DD28009880BB /* C48.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = C48.pdf; sourceTree = "<group>"; };
+		A1C976FB2636DD29009880BB /* C51.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = C51.pdf; sourceTree = "<group>"; };
+		A1C976FC2636DD2B009880BB /* C10.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = C10.pdf; sourceTree = "<group>"; };
 		E648B7B3E23F2B867A35CE9B /* Pods-BookHack-BookHackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookHack-BookHackUITests.debug.xcconfig"; path = "Target Support Files/Pods-BookHack-BookHackUITests/Pods-BookHack-BookHackUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F31DA9F2D63E442C4D41659B /* Pods-BookHackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookHackTests.release.xcconfig"; path = "Target Support Files/Pods-BookHackTests/Pods-BookHackTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -287,6 +295,9 @@
 				129389F12606310C00EA3FF3 /* DetailScene.sks */,
 				53668E9A26060744002C9B5E /* Info.plist */,
 				53668EBF2606087F002C9B5E /* GoogleService-Info.plist */,
+				A1C976FA2636DD28009880BB /* C48.pdf */,
+				A1C976FB2636DD29009880BB /* C51.pdf */,
+				A1C976FC2636DD2B009880BB /* C10.pdf */,
 			);
 			path = BookHack;
 			sourceTree = "<group>";
@@ -337,6 +348,7 @@
 		53668EF8260613CD002C9B5E /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				A1C976F42636DCAE009880BB /* PDFView */,
 				12447FBE26073F4300BADB04 /* UsersRaiting */,
 				539E5A4C2607018000431663 /* UserProfile */,
 				5356E1B02606665E00BEF58C /* Book */,
@@ -439,6 +451,14 @@
 				539E5A55260701B200431663 /* UserProfileViewModel.swift */,
 			);
 			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		A1C976F42636DCAE009880BB /* PDFView */ = {
+			isa = PBXGroup;
+			children = (
+				A1C976F52636DCD8009880BB /* PDFKitView.swift */,
+			);
+			path = PDFView;
 			sourceTree = "<group>";
 		};
 		B829297BD6951B7F358B4953 /* Pods */ = {
@@ -564,7 +584,10 @@
 			files = (
 				129389F22606310C00EA3FF3 /* DetailScene.sks in Resources */,
 				12447FC82607449300BADB04 /* Tutor.xcassets in Resources */,
+				A1C976FE2636DD2B009880BB /* C51.pdf in Resources */,
+				A1C976FF2636DD2B009880BB /* C10.pdf in Resources */,
 				12938A21260648C300EA3FF3 /* LaunchScreen.storyboard in Resources */,
+				A1C976FD2636DD2B009880BB /* C48.pdf in Resources */,
 				53668EC02606087F002C9B5E /* GoogleService-Info.plist in Resources */,
 				53668E9626060744002C9B5E /* Assets.xcassets in Resources */,
 			);
@@ -742,6 +765,7 @@
 				53668F34260618B1002C9B5E /* AppTexts.swift in Sources */,
 				539E5A512607018D00431663 /* UserProfileView.swift in Sources */,
 				539E5A56260701B200431663 /* UserProfileViewModel.swift in Sources */,
+				A1C976F62636DCD8009880BB /* PDFKitView.swift in Sources */,
 				53668F3B2606192A002C9B5E /* SmsCodeTextField.swift in Sources */,
 				53668F5126061A33002C9B5E /* InnerNetworkService.swift in Sources */,
 				53668EE8260612D6002C9B5E /* CoordinatorProtocol.swift in Sources */,

@@ -10,56 +10,62 @@ import SDWebImageSwiftUI
 
 struct CatalogSwiftView: View {
     
-    @ObservedObject private var viewModel: CatalogViewModel
+    //    @ObservedObject private var viewModel: CatalogViewModel
     
-    init(viewModel: CatalogViewModel) {
-        self.viewModel = viewModel
-    }
+    let instructions = ["C48", "C51", "C10"]
+    
+    //    init(viewModel: CatalogViewModel) {
+    //        self.viewModel = viewModel
+    //    }
     
     var body: some View {
+        
         VStack(alignment: .center) {
-            List(viewModel.books, id: \.isbn) { book in
-                    WebImage(url: URL(string: book.imageUrl ?? ""))
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height: 100, alignment: .center)
-                    .cornerRadius(25)
-                    .clipped()
-                VStack(alignment: .leading) {
-                    Text(book.title)
-                        .font(.title3)
-                    NavigationLink(destination: CatalogDetailedView(viewModel: CatalogDetailedViewModel(book: book))) {
-                        Text("")
-                            .font(.caption2)
+            Text("Инструкции")
+                .font(.title)
+                .padding(24)
+            List(instructions, id: \.self) { instruction in
+                NavigationLink(destination: PDFKitView(url: Bundle.main.url(forResource: instruction, withExtension: "pdf")!)) {
+                    VStack(alignment: .leading) {
+                        
+                        Text(instruction)
+                            .font(.title3)
+                        Text("UR-10")
+                            .font(.subheadline)
                             .foregroundColor(.gray)
                     }
-                    Text(book.author)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                    Text("Издательство: \(book.publisher ?? "")")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
                 }
+                .padding()
             }
             .cornerRadius(25)
             .padding()
             Spacer()
-            Button {
-                viewModel.giveTakeButtonHandler()
-            } label: {
-                Text("Забрать книжку")
-                    .frame(width: 200, height: 35, alignment: .center)
-                    .foregroundColor(.white)
-                    .background(Color.purple)
-                    .cornerRadius(25)
-                    .clipped()
-            }
-            .padding()
+            //            Button {
+            ////                viewModel.giveTakeButtonHandler()
+            //            } label: {
+            //                Text("Забрать книжку")
+            //                    .frame(width: 200, height: 35, alignment: .center)
+            //                    .foregroundColor(.white)
+            //                    .background(Color.purple)
+            //                    .cornerRadius(25)
+            //                    .clipped()
+            //            }
+            //            .padding()
         }
-        .onAppear(perform: viewModel.loadBooks)
+        //        .onAppear(perform: viewModel.loadBooks)
         .background(SwiftUI.Image("Coolerbackground").edgesIgnoringSafeArea(.all))
     }
 }
+
+struct PDFKitView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        CatalogSwiftView()
+        
+    }
+}
+
+
 
 struct CatalogDetailedView: View {
     
@@ -127,4 +133,9 @@ class CatalogDetailedViewModel: BookViewModelProtocol {
 }
 
 
-
+//
+//extension String: Identifiable {
+//    public var id: ObjectIdentifier {
+//        return UUID().uuidString
+//    }
+//}
