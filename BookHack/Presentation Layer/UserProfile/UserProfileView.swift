@@ -31,7 +31,7 @@ struct UserProfileView: View {
                 }
                 Spacer()
             }.padding(.bottom, 20)
-            Text("Читаю сейчас:")
+            Text("Работаю над:")
                 .foregroundColor(Color.gray)
                 .font(.title2)
             reservedBooks
