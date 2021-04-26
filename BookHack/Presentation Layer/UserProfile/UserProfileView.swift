@@ -58,7 +58,7 @@ struct UserProfileView: View {
                         Text("ISBN: \(book.isbn)")
                             .font(.caption)
                         NavigationLink(destination: BookDetailedView(book: book, viewModel: viewModel)) {
-                            Text("Вернуть книжку")
+                            Text("Завершить работу над")
                                 .foregroundColor(.gray)
                         
                         }
