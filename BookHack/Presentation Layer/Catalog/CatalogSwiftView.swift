@@ -11,9 +11,7 @@ import SDWebImageSwiftUI
 struct CatalogSwiftView: View {
     
     //    @ObservedObject private var viewModel: CatalogViewModel
-    
-    let instructions = ["C48", "C51", "C10"]
-    
+        
     //    init(viewModel: CatalogViewModel) {
     //        self.viewModel = viewModel
     //    }
@@ -24,13 +22,12 @@ struct CatalogSwiftView: View {
             Text("Инструкции")
                 .font(.title)
                 .padding(24)
-            List(instructions, id: \.self) { instruction in
-                NavigationLink(destination: PDFKitView(url: Bundle.main.url(forResource: instruction, withExtension: "pdf")!)) {
+            List(instructionTestData) { instruction in
+                NavigationLink(destination: PDFKitView(url: Bundle.main.url(forResource: instruction.headline, withExtension: "pdf")!)) {
                     VStack(alignment: .leading) {
-                        
-                        Text(instruction)
+                        Text(instruction.name)
                             .font(.title3)
-                        Text("UR-10")
+                        Text(instruction.headline)
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
