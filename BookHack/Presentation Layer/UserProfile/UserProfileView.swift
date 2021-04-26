@@ -31,7 +31,7 @@ struct UserProfileView: View {
                 }
                 Spacer()
             }.padding(.bottom, 20)
-            Text("Читаю сейчас:")
+            Text("Работаю над:")
                 .foregroundColor(Color.gray)
                 .font(.title2)
             reservedBooks
@@ -58,7 +58,7 @@ struct UserProfileView: View {
                         Text("ISBN: \(book.isbn)")
                             .font(.caption)
                         NavigationLink(destination: BookDetailedView(book: book, viewModel: viewModel)) {
-                            Text("Вернуть книжку")
+                            Text("Завершить работу над")
                                 .foregroundColor(.gray)
                         
                         }
